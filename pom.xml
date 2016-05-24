@@ -3,6 +3,6 @@
   <groupId>juliusHuelsmann</groupId>
   <artifactId>javaUtils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Utils</name>
+  <name>javaUtils</name>
   <description>Java Utilities</description>
 </project>
