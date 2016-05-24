@@ -3,10 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>juliusHuelsmann</groupId>
+  <groupId>de.juliusHuelsmann</groupId>
   <artifactId>javaUtils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
   <name>javaUtils</name>
   <description>Java Utilities</description>
+  
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+  
 </project>
