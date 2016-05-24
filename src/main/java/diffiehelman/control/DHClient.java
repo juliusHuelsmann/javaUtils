@@ -59,7 +59,7 @@ public class DHClient {
             }
 
             public DHParameterSpec getParams() {
-              DHParameterSpec dh = new DHParameterSpec(p, g)
+//              DHParameterSpec dh = new DHParameterSpec(p, g)
               // TODO Auto-generated method stub
               return null;
             }
