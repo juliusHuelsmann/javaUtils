@@ -19,7 +19,7 @@ public class OpFrame extends JFrame {
       super.setUndecorated(true);
       setBackground(new Color(0,0,0,0));
       setLocationRelativeTo(null);
-      super.setSize(50, 50);
+      super.setSize(100,100);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel() {
@@ -42,14 +42,24 @@ public class OpFrame extends JFrame {
         setContentPane(panel);
         setLayout(null);
         
-        boolean test = false;
+        System.out.println("new version");
+        boolean test = true;
         if (test) {
-        JButton jbtn = new JButton("huhu");
-        jbtn.setSize(50, 10);
-        jbtn.setBorder(null);
-        jbtn.setOpaque(false);
-        jbtn.setContentAreaFilled(false);
-        super.add(jbtn);
+          BufferedImage bi = new BufferedImage(50, 10, BufferedImage.TYPE_INT_ARGB);
+          for (int i = 0; i < bi.getWidth(); i++) {
+            for (int j = 0; j < bi.getHeight(); j++) {
+              bi.setRGB(i, j, new Color(0, 0, 0, 0).getRGB());
+            }
+          }
+          for (int j = 0; j < bi.getHeight(); j++) {
+            bi.setRGB(j, j, new Color(50, 50, 50, 150).getRGB());
+          }
+          JLabel jbtn = new JLabel();
+          jbtn.setSize(50, 10);
+          jbtn.setBorder(null);
+          jbtn.setIcon(new ImageIcon(bi));
+          jbtn.setOpaque(false);
+          super.add(jbtn);
         }
     }
 
