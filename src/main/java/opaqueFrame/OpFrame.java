@@ -15,6 +15,7 @@ public class OpFrame extends JFrame {
   //TODO: einen eigenen gradientPaint schreiben.
     public OpFrame() {
       super();
+      super.setTitle("hier");
       super.setUndecorated(true);
       setBackground(new Color(0,0,0,0));
       setLocationRelativeTo(null);
@@ -29,17 +30,27 @@ public class OpFrame extends JFrame {
                     final int G = 240;
                     final int B = 240;
 
-//                    Paint p =
-//                        new GradientPaint(0.0f, 0.0f, new Color(R, G, B, 0),
-//                            0.0f, getHeight(), new Color(R, G, B, 255), true);
-//                    Graphics2D g2d = (Graphics2D)g;
-//                    g2d.setPaint(p);
-//                    g2d.fillRect(0, 0, getWidth(), getHeight());
+                    Paint p =
+                        new GradientPaint(0.0f, 0.0f, new Color(R, G, B, 0),
+                            0.0f, getHeight(), new Color(R, G, B, 0), true);
+                    Graphics2D g2d = (Graphics2D)g;
+                    g2d.setPaint(p);
+                    g2d.fillRect(0, 0, getWidth(), getHeight());
                 }
             }
         };
         setContentPane(panel);
         setLayout(null);
+        
+        boolean test = false;
+        if (test) {
+        JButton jbtn = new JButton("huhu");
+        jbtn.setSize(50, 10);
+        jbtn.setBorder(null);
+        jbtn.setOpaque(false);
+        jbtn.setContentAreaFilled(false);
+        super.add(jbtn);
+        }
     }
 
     public static void main(String[] args) {
