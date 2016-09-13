@@ -56,9 +56,9 @@ public final class BufferedViewer extends OpFrame {
      * 
      */
     public BufferedViewer() {
-        super();
+        super(true);
         final int size = 100;
-        super.setUndecorated(true);
+//        super.setUndecorated(true);
         super.setSize(size, size);
         
         jlbl_painting = new JLabel();
