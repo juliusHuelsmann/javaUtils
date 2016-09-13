@@ -64,7 +64,7 @@ public class DoubleButton extends JPanel {
     BufferedImage tempbiSelected = Utils.resize(
         "/res/feldSingleSelected.png",
         44, getHeight());
-    BufferedImage tempbiNormal = Utils.resize("/res/feldSingle.png",
+    BufferedImage tempbiNormal = Utils.resize("/res/feldSingleOp.png",
         44, getHeight());
 
     for (int i = 0; i < getWidth(); i++) {
