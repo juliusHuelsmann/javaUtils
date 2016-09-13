@@ -260,9 +260,6 @@ public class Utils {
     BufferedImage imgScaled;
     try {
 
-      String myPath = Utils.class.getResource(xpath).getPath();
-      myPath = convertString(myPath); 
-
       imgScaled = ImageIO.read(Utils.class.getResourceAsStream(xpath));
       return resize(imgScaled, xwidth, xheight);
     } catch (IOException e) {
