@@ -63,6 +63,7 @@ public final class BufferedViewer extends OpFrame {
         
         jlbl_painting = new JLabel();
         jlbl_painting.setSize(getSize());
+        jlbl_painting.setOpaque(false);
         super.add(jlbl_painting);
         
         
