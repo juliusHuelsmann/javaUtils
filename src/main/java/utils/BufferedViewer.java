@@ -26,7 +26,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import opaqueFrame.OpFrame;
-import spotlight.delphi.utils.Utils;
 
 
 /**
