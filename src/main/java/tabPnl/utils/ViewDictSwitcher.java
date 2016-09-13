@@ -1,4 +1,4 @@
-package tabOpFrame.utils;
+package tabPnl.utils;
 
 import java.awt.Dimension;
 import java.awt.Point;

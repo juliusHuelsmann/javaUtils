@@ -23,7 +23,7 @@ import javax.swing.SwingConstants;
 
 import movelistener.control.Movelistener;
 import opaqueFrame.OpFrame;
-import tabOpFrame.utils.ViewDictSwitcher;
+import tabPnl.utils.ViewDictSwitcher;
 import utils.Utils;
 
 @SuppressWarnings("serial")
@@ -42,6 +42,7 @@ public class TabPanel extends JPanel {
     
     super();
     super.setLayout(null);
+    super.setOpaque(false);
     vecDict = new Vector<ViewDictSwitcher>();
     
     jpnlSwitcher = new JPanel();
@@ -96,9 +97,9 @@ public class TabPanel extends JPanel {
   public ViewDictSwitcher add(final Container c, final Object xtxt, final int i,
       final int xwidth) {
     ViewDictSwitcher jbtnAdded = new ViewDictSwitcher(xtxt, i);
-    final int height = 44;
+    final int height = 30;
     jbtnAdded.setSize(xwidth, height);
-    jbtnAdded.setLocation(xwidth * i, 2);
+    jbtnAdded.setLocation(xwidth * i, 0);
     jbtnAdded.addActionListener(al);
     vecDict.add(i, jbtnAdded);
     jpnlSwitcher.add(jbtnAdded); 
