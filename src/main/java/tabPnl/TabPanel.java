@@ -1,4 +1,4 @@
-package tabOpFrame;
+package tabPnl;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -189,10 +189,10 @@ public class TabPanel extends JPanel {
     JFrame jf = new JFrame("hier");
     jf.setSize(300, 400);
     jf.setVisible(true);
+    jf.setLocationRelativeTo(null);
     
     TabPanel tof = new TabPanel(true);
     tof.setSize(200, 200);
-    jf.setLocationRelativeTo(null);
     tof.setVisible(true);
     jf.add(tof);
 
