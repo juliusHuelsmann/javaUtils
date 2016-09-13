@@ -107,6 +107,7 @@ public final class BufferedViewer extends OpFrame {
      */
     public synchronized void show(final BufferedImage _bi) {
     	
+      setLocationRelativeTo(null);
     	final boolean showEnabled = !false;
     	if (showEnabled) {
         	
