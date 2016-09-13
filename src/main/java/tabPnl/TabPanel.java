@@ -177,7 +177,7 @@ public class TabPanel extends JPanel {
     super.setSize(width, height);
     if (jpnlContent != null) {
       jpnlSwitcher.setLocation(0, 0);
-      jpnlSwitcher.setSize(getWidth(), 44);
+      jpnlSwitcher.setSize(getWidth(), 30);
       jpnlContent.setLocation(jpnlSwitcher.getX(), jpnlSwitcher.getHeight() + jpnlSwitcher.getY());
       jpnlContent.setSize(getWidth(), getHeight() - jpnlSwitcher.getHeight() - jpnlSwitcher.getY());
       
