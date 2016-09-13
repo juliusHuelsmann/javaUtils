@@ -37,9 +37,28 @@ public class TabOpFrame extends OpFrame {
   private JPanel jpnlSwitcher;
 
   private Vector<ViewDictSwitcher> vecDict;
-  
+
   public TabOpFrame(final WindowFocusListener wf) {
     
+    super();
+    super.setUndecorated(true);
+    super.setLayout(null);
+    vecDict = new Vector<ViewDictSwitcher>();
+    
+    jpnlSwitcher = new JPanel();
+    jpnlSwitcher.setOpaque(false);
+    jpnlSwitcher.setLayout(null);
+    super.add(jpnlSwitcher);
+    
+    jpnlContent = new JPanel();
+    jpnlContent.setOpaque(false);
+    jpnlContent.setLayout(null);
+    super.add(jpnlContent);
+    
+  }
+  public TabOpFrame(final WindowFocusListener wf, final boolean xf) {
+    
+    super(xf);
     super.setUndecorated(true);
     super.setLayout(null);
     vecDict = new Vector<ViewDictSwitcher>();
