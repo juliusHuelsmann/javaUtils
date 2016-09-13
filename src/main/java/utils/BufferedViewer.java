@@ -19,6 +19,8 @@ package utils;
  */
 
 
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
@@ -60,11 +62,20 @@ public final class BufferedViewer extends OpFrame {
         final int size = 100;
 //        super.setUndecorated(true);
         super.setSize(size, size);
+        super.setLocationRelativeTo(null);
         
         jlbl_painting = new JLabel();
         jlbl_painting.setSize(getSize());
+        
         jlbl_painting.setOpaque(false);
         super.add(jlbl_painting);
+
+        for (MouseListener ml : getMouseListeners()) {
+          jlbl_painting.addMouseListener(ml);
+        }
+        for (MouseMotionListener ml : getMouseMotionListeners()) {
+          jlbl_painting.addMouseMotionListener(ml);
+        }
         
         
         super.setVisible(true);
@@ -81,6 +92,9 @@ public final class BufferedViewer extends OpFrame {
         return instance;
     }
 
+    public static void main(String[]args) {
+      BufferedViewer.getInstance().show(Utils.resize("/res/feldSingle.png", 100, 100));
+    }
     
     /**
      * The last time.

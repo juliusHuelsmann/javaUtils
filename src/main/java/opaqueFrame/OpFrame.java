@@ -21,6 +21,7 @@ public class OpFrame extends JFrame {
       super();
 
       if (addMoveListener) {
+        
     Movelistener ml = new Movelistener(this);
     super.addMouseMotionListener(ml);
     super.addMouseListener(ml);
