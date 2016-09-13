@@ -99,7 +99,7 @@ public class TabPanel extends JPanel {
     ViewDictSwitcher jbtnAdded = new ViewDictSwitcher(xtxt, i);
     final int height = 30;
     jbtnAdded.setSize(xwidth, height);
-    jbtnAdded.setLocation(xwidth * i, 0);
+    jbtnAdded.setLocation((xwidth + 2) * i, 0);
     jbtnAdded.addActionListener(al);
     vecDict.add(i, jbtnAdded);
     jpnlSwitcher.add(jbtnAdded); 
