@@ -27,7 +27,7 @@ import tabOpFrame.utils.ViewDictSwitcher;
 import utils.Utils;
 
 @SuppressWarnings("serial")
-public class TabOpFrame extends OpFrame {
+public class TabPanel extends JPanel {
   
   /**
    * The jPanel that receives the content.
@@ -38,10 +38,9 @@ public class TabOpFrame extends OpFrame {
 
   private Vector<ViewDictSwitcher> vecDict;
 
-  public TabOpFrame(final WindowFocusListener wf) {
+  public TabPanel() {
     
     super();
-    super.setUndecorated(true);
     super.setLayout(null);
     vecDict = new Vector<ViewDictSwitcher>();
     
@@ -56,10 +55,8 @@ public class TabOpFrame extends OpFrame {
     super.add(jpnlContent);
     
   }
-  public TabOpFrame(final WindowFocusListener wf, final boolean xf) {
-    
+  public TabPanel(final boolean xf) {
     super(xf);
-    super.setUndecorated(true);
     super.setLayout(null);
     vecDict = new Vector<ViewDictSwitcher>();
     
@@ -188,10 +185,16 @@ public class TabOpFrame extends OpFrame {
   
   
   public static void main(String[] args) {
-    TabOpFrame tof = new TabOpFrame(null);
+    
+    JFrame jf = new JFrame("hier");
+    jf.setSize(300, 400);
+    jf.setVisible(true);
+    
+    TabPanel tof = new TabPanel(true);
     tof.setSize(200, 200);
-    tof.setLocationRelativeTo(null);
+    jf.setLocationRelativeTo(null);
     tof.setVisible(true);
+    jf.add(tof);
 
     tof.add(new JPanel(), "Spotlight-Athene", 0);
     tof.add(new JPanel(), "Allgemeine", 1);
