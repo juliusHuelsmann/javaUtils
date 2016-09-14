@@ -83,9 +83,10 @@ public class TabPanel extends JPanel {
       int c = 0;
       for (ViewDictSwitcher v : vecDict) {
         v.setSelected(false);
-        setVisibleDictionary(veccom.elementAt(c), c);
         if (v.getActionSource().equals(e.getSource())) {
 
+          setVisibleDictionary(veccom.elementAt(c), c);
+//          view.setVisibleDictionary(getDictionary(s.getIndex()), s.getIndex());
           v.setSelected(true);
         }
         c++;
