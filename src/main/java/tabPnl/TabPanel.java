@@ -37,6 +37,7 @@ public class TabPanel extends JPanel {
   private JPanel jpnlSwitcher;
 
   private Vector<ViewDictSwitcher> vecDict;
+  private Vector<Container> veccom;
 
   public TabPanel() {
     
@@ -44,6 +45,7 @@ public class TabPanel extends JPanel {
     super.setLayout(null);
     super.setOpaque(false);
     vecDict = new Vector<ViewDictSwitcher>();
+    veccom = new Vector<Container>();
     
     jpnlSwitcher = new JPanel();
     jpnlSwitcher.setOpaque(false);
@@ -60,6 +62,8 @@ public class TabPanel extends JPanel {
     super(xf);
     super.setLayout(null);
     vecDict = new Vector<ViewDictSwitcher>();
+    veccom = new Vector<Container>();
+    
     
     jpnlSwitcher = new JPanel();
     jpnlSwitcher.setOpaque(false);
@@ -76,12 +80,15 @@ public class TabPanel extends JPanel {
     
     public void actionPerformed(ActionEvent e) {
 
+      int c = 0;
       for (ViewDictSwitcher v : vecDict) {
         v.setSelected(false);
+        setVisibleDictionary(veccom.elementAt(c), c);
         if (v.getActionSource().equals(e.getSource())) {
 
           v.setSelected(true);
         }
+        c++;
       }
           
     }
@@ -102,6 +109,7 @@ public class TabPanel extends JPanel {
     jbtnAdded.setLocation((xwidth + 2) * i, 0);
     jbtnAdded.addActionListener(al);
     vecDict.add(i, jbtnAdded);
+    veccom.add(i, c);
     jpnlSwitcher.add(jbtnAdded); 
     c.setSize(jpnlContent.getSize());
     jpnlContent.add(c);
@@ -177,7 +185,7 @@ public class TabPanel extends JPanel {
     super.setSize(width, height);
     if (jpnlContent != null) {
       jpnlSwitcher.setLocation(0, 0);
-      jpnlSwitcher.setSize(getWidth(), 30);
+      jpnlSwitcher.setSize(getWidth(), 35);
       jpnlContent.setLocation(jpnlSwitcher.getX(), jpnlSwitcher.getHeight() + jpnlSwitcher.getY());
       jpnlContent.setSize(getWidth(), getHeight() - jpnlSwitcher.getHeight() - jpnlSwitcher.getY());
       
