@@ -96,6 +96,11 @@ public class TabPanel extends JPanel {
   };
 
   
+  public void open(final int o) {
+
+      setVisibleDictionary(veccom.elementAt(o), o);
+  }
+  
   public ViewDictSwitcher add(final Container c, final Object xtxt, final int i) {
     final int width = 125;
     return add(c, xtxt, i, width);
